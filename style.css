@@ -1,0 +1,104 @@
+body {
+    margin: 0px;
+    font-family: "Lato", sans-serif;
+    height: 100vh;
+    margin: 0px auto;
+  }
+  
+  .mainContainer {
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 1000px;
+    grid-template-areas:
+      "input"
+      
+  }
+  
+  #container1 {
+    grid-area: input;
+    background-image: url("./images/airplane-sunset.jpg");
+    background-position: top;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 250px;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  input {
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+  }
+  
+  #map {
+    
+    height: 100%;
+  }
+  
+  button {
+    padding: 15px 20px;
+    border-radius: 0px 15px 15px 0px;
+    margin-left: -40px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  #container2 {
+    background-color: #ffffff;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+      0 15px 40px rgba(166, 173, 201, 0.2);
+    z-index: 2;
+    display: block;
+    margin: 0px auto;
+    margin-top: 15px;
+  }
+  .detail {
+    padding: 2px;
+    text-align: center;
+  }
+  
+  .subtitle {
+    color: #bcbcbc;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  
+  /** Medium screens **/
+  @media screen and (min-width: 600px) {
+    .mainContainer {
+      
+      margin: 0px auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 250px 750px;
+      grid-template-areas:
+        "input"
+        "map";
+    }
+    #container2 {
+      display: flex;
+      justify-content: space-between;
+      max-width: 900px;
+      margin-top: 50px;
+    }
+    .detail {
+      padding: 30px;
+      text-align: left;
+      
+    }
+    .sidebar {
+      border-left: 1px solid #eee;
+    }
+    input{
+        width:30%;
+    }
+  }
+  
+  
+  
